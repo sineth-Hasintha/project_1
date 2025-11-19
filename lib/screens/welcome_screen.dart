@@ -31,9 +31,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(
-                  'https://images.unsplash.com/photo-1585171328560-947fbd92d6f0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // සීගිරියේ හෝ ලස්සන පින්තූරයක්
-                ),
+                image: AssetImage('bg.jpg'),//bg image in wellcome
                 fit: BoxFit.cover,
               ),
             ),
