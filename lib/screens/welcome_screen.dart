@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'onboarding.dart'; // ඔයාගේ Onboarding page එක මේ නමින් තියෙන්න ඕන
+import 'onboarding.dart'; // Ensure your Onboarding page has this name
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -13,7 +13,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   void initState() {
     super.initState();
-    // තත්පර 5කින් Onboarding එකට යනවා
+    // Navigate to Onboarding after 5 seconds
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
@@ -27,27 +27,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // 1. Background Image (ශ්‍රී ලංකාවේ පින්තූරයක්)
+          // 1. Background Image
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('bg.jpg'),//bg image in wellcome
+                image: AssetImage('assets/images/bg.jpg'), // bg image in welcome
                 fit: BoxFit.cover,
               ),
             ),
           ),
 
-          // 2. Dark Overlay (පින්තූරේ උඩින් කළු පාට gradient එකක්)
-          // මේක දාන්නේ අකුරු පැහැදිලිව පේන්න
+          // 2. Dark Overlay
+          // This gradient is added to make the text more visible
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.black.withValues(alpha: 0.3),
-                    Colors.black.withValues(alpha: 0.7),
-                  ],
+                colors: [
+                  Colors.black.withValues(alpha: 0.3),
+                  Colors.black.withValues(alpha: 0.7),
+                ],
               ),
             ),
           ),
@@ -99,7 +99,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
                 // Loading Indicator
                 CircularProgressIndicator(
-                  color: Colors.greenAccent, // ශ්‍රී ලංකාවේ කොළ පාට
+                  color: Colors.greenAccent, // Green accent color
                 ),
               ],
             ),
